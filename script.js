@@ -1,34 +1,32 @@
 const boardSpaces = [
-  { no: 0, name: "START 現金流日", action: "結算薪水 + 被動收入 - 固定支出" },
-  { no: 1, name: "資產市場", action: "翻 2 張資產卡，可買 1 張" },
-  { no: 2, name: "事件卡", action: "抽 1 張事件卡" },
-  { no: 3, name: "學習充電", action: "可支付 2,000，工作備胎 +1" },
-  { no: 4, name: "機會卡", action: "抽 1 張機會卡" },
-  { no: 5, name: "資產市場", action: "翻 2 張資產卡，可買 1 張" },
-  { no: 6, name: "公益行動", action: "家庭備胎 +1，或支付 1,000 讓家庭與財務各 +1" },
-  { no: 7, name: "健康日", action: "健康備胎 +1" },
-  { no: 8, name: "現金流日", action: "結算薪水 + 被動收入 - 固定支出" },
-  { no: 9, name: "開源合作", action: "現金 +2,000；工作備胎 4+ 時改為 +3,000" },
-  { no: 10, name: "家庭時光", action: "家庭備胎 +1" },
-  { no: 11, name: "關鍵抉擇", action: "抽 1 張關鍵抉擇卡" },
-  { no: 12, name: "資產市場", action: "翻 2 張資產卡，可買 1 張" },
-  { no: 13, name: "事件卡", action: "抽 1 張事件卡" },
-  { no: 14, name: "旅行放鬆", action: "可支付 2,000，健康 +1、家庭 +1" },
-  { no: 15, name: "休息充電", action: "任選一個備胎 +1" },
-  { no: 16, name: "現金流日", action: "結算薪水 + 被動收入 - 固定支出" },
-  { no: 17, name: "資產市場", action: "翻 2 張資產卡，可買 1 張" },
-  { no: 18, name: "學習充電", action: "可支付 2,000，工作備胎 +1" },
-  { no: 19, name: "機會卡", action: "抽 1 張機會卡" },
-  { no: 20, name: "家庭時光", action: "家庭備胎 +1" },
-  { no: 21, name: "健康日", action: "健康備胎 +1" },
-  { no: 22, name: "事件卡", action: "抽 1 張事件卡" },
-  { no: 23, name: "關鍵抉擇", action: "抽 1 張關鍵抉擇卡" },
-  { no: 24, name: "現金流日", action: "結算薪水 + 被動收入 - 固定支出" },
-  { no: 25, name: "儲蓄存摺", action: "可存 2,000 到儲蓄，財務備胎 +1" },
-  { no: 26, name: "旅行放鬆", action: "可支付 2,000，健康 +1、家庭 +1" },
-  { no: 27, name: "資產市場", action: "翻 2 張資產卡，可買 1 張" },
-  { no: 28, name: "事件卡", action: "抽 1 張事件卡" },
-  { no: 29, name: "休息充電", action: "任選一個備胎 +1" },
+  { no: 0, name: "現金流日", action: "經過或停在都要結算：薪水 + 被動收入 - 固定支出。", tip: "結算後立刻把現金更新到玩家紀錄表。", kind: "cash", x: 1.4, y: 1.1, w: 11.8, h: 14.8 },
+  { no: 1, name: "資產市場", action: "停在此格時翻 2 張資產卡，可以買 1 張，也可以不買。", tip: "買下後更新現金、被動收入、固定支出與資產淨現金流。", kind: "asset", x: 14.0, y: 1.1, w: 10.6, h: 14.8 },
+  { no: 2, name: "事件卡", action: "抽 1 張事件卡並立即照卡片內容執行。", tip: "若任何備胎因此變成 0，立刻進入爆胎求救。", kind: "event", x: 25.2, y: 1.1, w: 10.4, h: 14.8 },
+  { no: 3, name: "學習充電", action: "可以支付 2,000 元，讓工作備胎 +1。", tip: "如果工作備胎已滿 5，改為支付 2,000 元並讓薪水 +500。", kind: "growth", x: 36.1, y: 1.1, w: 10.5, h: 14.8 },
+  { no: 4, name: "機會卡", action: "抽 1 張機會卡，依卡片取得現金、加薪、折扣或備胎補強。", tip: "若卡片寫可保留，就放在自己面前等待時機使用。", kind: "opportunity", x: 47.0, y: 1.1, w: 10.5, h: 14.8 },
+  { no: 5, name: "資產市場", action: "停在此格時翻 2 張資產卡，可以買 1 張，也可以不買。", tip: "每次資產市場最多買 1 張。", kind: "asset", x: 57.9, y: 1.1, w: 10.5, h: 14.8 },
+  { no: 6, name: "公益日", action: "家庭備胎 +1；或支付 1,000 元，家庭備胎 +1 且財務備胎 +1。", tip: "用資源幫助別人，也累積家庭與財務韌性。", kind: "family", x: 68.7, y: 1.1, w: 10.5, h: 14.8 },
+  { no: 7, name: "健康日", action: "健康備胎 +1。", tip: "如果健康備胎已滿 5，改為現金 +500。", kind: "health", x: 79.4, y: 1.1, w: 10.5, h: 14.8 },
+  { no: 8, name: "現金流日", action: "經過或停在都要結算：薪水 + 被動收入 - 固定支出。", tip: "固定支出只在現金流日扣，不是每回合扣。", kind: "cash", x: 89.0, y: 1.1, w: 9.8, h: 14.8 },
+  { no: 9, name: "開源合作", action: "現金 +2,000；如果工作備胎 4 以上，改為現金 +3,000。", tip: "工作能力越穩，合作收入越好。", kind: "growth", x: 88.1, y: 16.4, w: 10.6, h: 13.1 },
+  { no: 10, name: "家庭時光", action: "家庭備胎 +1。", tip: "如果家庭備胎已滿 5，改為健康備胎 +1。", kind: "family", x: 88.1, y: 30.3, w: 10.6, h: 13.1 },
+  { no: 11, name: "抉擇卡", action: "抽 1 張關鍵抉擇卡，必須在 A / B 之間選一個執行。", tip: "沒有標準答案，依當下現金、備胎與收入狀態判斷。", kind: "decision", x: 88.1, y: 44.1, w: 10.6, h: 13.1 },
+  { no: 12, name: "資產市場", action: "停在此格時翻 2 張資產卡，可以買 1 張，也可以不買。", tip: "若現金不足，可依規則借錢購買，但要記得增加負債與固定支出。", kind: "asset", x: 88.1, y: 58.0, w: 10.6, h: 13.1 },
+  { no: 13, name: "事件卡", action: "抽 1 張事件卡並立即照卡片內容執行。", tip: "事件可能扣錢、扣備胎，或影響資產。", kind: "event", x: 88.1, y: 71.9, w: 10.6, h: 13.1 },
+  { no: 14, name: "現金流日", action: "經過或停在都要結算：薪水 + 被動收入 - 固定支出。", tip: "被動收入會在這裡變成真正拿到手的現金。", kind: "cash", x: 89.0, y: 85.1, w: 9.8, h: 13.8 },
+  { no: 15, name: "旅遊放鬆", action: "可以支付 2,000 元，健康備胎 +1、家庭備胎 +1。", tip: "若健康或家庭原本是 1，該項可額外 +1。", kind: "health", x: 79.4, y: 85.1, w: 10.5, h: 13.8 },
+  { no: 16, name: "抉擇卡", action: "抽 1 張關鍵抉擇卡，必須在 A / B 之間選一個執行。", tip: "選完後立刻更新紀錄表。", kind: "decision", x: 68.7, y: 85.1, w: 10.5, h: 13.8 },
+  { no: 17, name: "事件卡", action: "抽 1 張事件卡並立即照卡片內容執行。", tip: "先讀卡，再處理金錢、備胎、資產與爆胎。", kind: "event", x: 57.9, y: 85.1, w: 10.5, h: 13.8 },
+  { no: 18, name: "家庭時光", action: "家庭備胎 +1。", tip: "如果家庭備胎已滿 5，改為健康備胎 +1。", kind: "family", x: 47.0, y: 85.1, w: 10.5, h: 13.8 },
+  { no: 19, name: "機會卡", action: "抽 1 張機會卡，依卡片取得現金、加薪、折扣或備胎補強。", tip: "好機會也要看自己現在是否付得起成本。", kind: "opportunity", x: 36.1, y: 85.1, w: 10.5, h: 13.8 },
+  { no: 20, name: "學習充電", action: "可以支付 2,000 元，讓工作備胎 +1。", tip: "如果工作備胎已滿 5，改為支付 2,000 元並讓薪水 +500。", kind: "growth", x: 25.2, y: 85.1, w: 10.4, h: 13.8 },
+  { no: 21, name: "資產市場", action: "停在此格時翻 2 張資產卡，可以買 1 張，也可以不買。", tip: "沒買的卡放到資產棄牌區。", kind: "asset", x: 14.0, y: 85.1, w: 10.6, h: 13.8 },
+  { no: 22, name: "現金流日", action: "經過或停在都要結算：薪水 + 被動收入 - 固定支出。", tip: "若錢不夠支付，依序使用現金、儲蓄、賣資產，最後才借錢。", kind: "cash", x: 1.4, y: 85.1, w: 11.8, h: 13.8 },
+  { no: 23, name: "機會卡", action: "抽 1 張機會卡，依卡片取得現金、加薪、折扣或備胎補強。", tip: "抽完後照卡片文字執行，或依卡片保留到之後使用。", kind: "opportunity", x: 1.4, y: 71.9, w: 11.8, h: 13.1 },
+  { no: 24, name: "儲蓄存款", action: "可以把 2,000 元從現金移到儲蓄，並讓財務備胎 +1。", tip: "儲蓄可在現金不足時救急，也會在遊戲結束時計分。", kind: "cash", x: 1.4, y: 58.0, w: 11.8, h: 13.1 },
+  { no: 25, name: "離職出遊", action: "可以選擇短暫休息轉換：工作備胎 -1，健康備胎 +1、家庭備胎 +1。", tip: "若不想承擔工作風險，可選擇不執行效果。", kind: "health", x: 1.4, y: 44.1, w: 11.8, h: 13.1 },
+  { no: 26, name: "資產市場", action: "停在此格時翻 2 張資產卡，可以買 1 張，也可以不買。", tip: "買資產是增加被動收入的主要方式。", kind: "asset", x: 1.4, y: 30.3, w: 11.8, h: 13.1 },
+  { no: 27, name: "事件卡", action: "抽 1 張事件卡並立即照卡片內容執行。", tip: "如果備胎足夠高，記得檢查是否能減免事件損失。", kind: "event", x: 1.4, y: 16.4, w: 11.8, h: 13.1 },
 ];
 
 const deckMeta = {
@@ -744,6 +742,64 @@ function escapeHTML(value) {
     .replaceAll("'", "&#039;");
 }
 
+function getBoardSpacePlacement(space) {
+  if (space.y < 18) return "bottom";
+  if (space.y > 70) return "top";
+  if (space.x < 20) return "right";
+  if (space.x > 75) return "left";
+  return "auto";
+}
+
+function getBoardSpaceTitle(space) {
+  return `第 ${space.no + 1} 格｜${space.name}`;
+}
+
+function getBoardSpaceContent(space) {
+  return `
+    <p class="mb-2 fw-bold">${escapeHTML(space.action)}</p>
+    <p class="mb-0 small text-secondary">${escapeHTML(space.tip)}</p>
+  `;
+}
+
+function renderBoardHotspots() {
+  const container = document.querySelector("#boardHotspots");
+  if (!container) return;
+
+  container.innerHTML = "";
+  boardSpaces.forEach((space) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = `board-hotspot board-hotspot-${space.kind}`;
+    button.style.left = `${space.x}%`;
+    button.style.top = `${space.y}%`;
+    button.style.width = `${space.w}%`;
+    button.style.height = `${space.h}%`;
+    button.setAttribute("aria-label", `${getBoardSpaceTitle(space)}：${space.action}`);
+    button.setAttribute("data-bs-toggle", "popover");
+    button.setAttribute("data-bs-trigger", "hover focus");
+    button.setAttribute("data-bs-html", "true");
+    button.setAttribute("data-bs-title", getBoardSpaceTitle(space));
+    button.setAttribute("data-bs-content", getBoardSpaceContent(space));
+    button.setAttribute("data-bs-placement", getBoardSpacePlacement(space));
+    button.setAttribute("data-bs-custom-class", "board-space-popover");
+    button.addEventListener("shown.bs.popover", () => button.classList.add("show"));
+    button.addEventListener("hidden.bs.popover", () => button.classList.remove("show"));
+    container.append(button);
+  });
+
+  if (!window.bootstrap?.Popover) return;
+
+  container.querySelectorAll("[data-bs-toggle='popover']").forEach((button) => {
+    window.bootstrap.Popover.getOrCreateInstance(button, {
+      container: "body",
+      html: true,
+      sanitize: false,
+      trigger: "hover focus",
+      customClass: "board-space-popover",
+    });
+  });
+}
+
 function renderTabs() {
   const tabs = document.querySelector("#deckTabs");
   tabs.innerHTML = Object.entries(deckMeta)
@@ -910,6 +966,7 @@ function setupModalFallback() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  renderBoardHotspots();
   sync();
   setupModalFallback();
 

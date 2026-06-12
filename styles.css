@@ -86,7 +86,7 @@ p {
   padding-top: 5rem;
   background:
     linear-gradient(90deg, rgba(12, 28, 41, 0.88), rgba(12, 28, 41, 0.58) 48%, rgba(12, 28, 41, 0.2)),
-    url("assets/web/map.webp?v=20260612-map-update") center / cover no-repeat;
+    url("assets/web/map.webp?v=20260612-hotspots") center / cover no-repeat;
 }
 
 .hero-metrics span {
@@ -139,6 +139,84 @@ p {
 .step-card p,
 .rule-card p {
   margin-bottom: 0;
+}
+
+.board-map-shell {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  background: #fff;
+  box-shadow: 0 1.4rem 3rem rgba(31, 41, 51, 0.18);
+}
+
+.board-map-shell img {
+  display: block;
+  width: 100%;
+}
+
+.board-hotspots {
+  position: absolute;
+  inset: 0;
+}
+
+.board-hotspot {
+  position: absolute;
+  border: 0;
+  border-radius: 0.8rem;
+  background: rgba(255, 255, 255, 0.02);
+  cursor: help;
+  transition:
+    background 140ms ease,
+    box-shadow 140ms ease,
+    outline-color 140ms ease;
+}
+
+.board-hotspot::after {
+  position: absolute;
+  inset: 0.25rem;
+  border: 2px solid transparent;
+  border-radius: 0.65rem;
+  content: "";
+  transition: border-color 140ms ease;
+}
+
+.board-hotspot:hover,
+.board-hotspot:focus-visible,
+.board-hotspot.show {
+  outline: 3px solid rgba(255, 193, 7, 0.95);
+  outline-offset: 2px;
+  background: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 0.8rem 1.6rem rgba(31, 41, 51, 0.22);
+}
+
+.board-hotspot:hover::after,
+.board-hotspot:focus-visible::after,
+.board-hotspot.show::after {
+  border-color: rgba(15, 118, 110, 0.85);
+}
+
+.map-hover-hint {
+  color: #51606d;
+  font-weight: 800;
+}
+
+.board-space-popover {
+  --bs-popover-max-width: 320px;
+  --bs-popover-border-color: rgba(15, 118, 110, 0.35);
+  --bs-popover-header-bg: #fff8ea;
+  --bs-popover-header-color: var(--ink);
+  --bs-popover-body-color: var(--ink);
+  border-radius: 0.75rem;
+  box-shadow: 0 1rem 2.4rem rgba(31, 41, 51, 0.2);
+}
+
+.board-space-popover .popover-header {
+  font-weight: 900;
+}
+
+.board-space-popover .popover-body {
+  font-size: 0.96rem;
+  line-height: 1.55;
 }
 
 .score-panel {
