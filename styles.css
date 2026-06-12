@@ -86,7 +86,7 @@ p {
   padding-top: 5rem;
   background:
     linear-gradient(90deg, rgba(12, 28, 41, 0.88), rgba(12, 28, 41, 0.58) 48%, rgba(12, 28, 41, 0.2)),
-    url("assets/web/map.webp") center / cover no-repeat;
+    url("assets/web/map.webp?v=20260612-map-update") center / cover no-repeat;
 }
 
 .hero-metrics span {
