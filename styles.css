@@ -1,0 +1,289 @@
+:root {
+  --cream: #fff8ea;
+  --soft: #f4f7f2;
+  --mint: #eaf5f1;
+  --ink: #1f2933;
+  --brand: #0f766e;
+  --coral: #bf5648;
+  --gold: #b8841f;
+  --line: #dfd6c5;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--ink);
+  background: var(--soft);
+  font-family:
+    "Noto Sans TC",
+    "Microsoft JhengHei",
+    "PingFang TC",
+    system-ui,
+    sans-serif;
+  letter-spacing: 0;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+p {
+  overflow-wrap: anywhere;
+}
+
+.fw-black {
+  font-weight: 900;
+}
+
+.text-brand {
+  color: var(--brand) !important;
+}
+
+.bg-cream {
+  background: rgba(255, 248, 234, 0.94) !important;
+  backdrop-filter: blur(14px);
+}
+
+.bg-soft {
+  background: var(--soft);
+}
+
+.bg-mint {
+  background: var(--mint);
+}
+
+.bg-card-gallery {
+  background: #eef3f6;
+}
+
+.section-pad {
+  padding: 5rem 0;
+}
+
+.section-kicker {
+  color: var(--gold);
+  font-size: 0.92rem;
+  font-weight: 900;
+}
+
+.btn-coral {
+  --bs-btn-bg: var(--coral);
+  --bs-btn-border-color: var(--coral);
+  --bs-btn-color: #fff;
+  --bs-btn-hover-bg: #a7463b;
+  --bs-btn-hover-border-color: #a7463b;
+  --bs-btn-hover-color: #fff;
+}
+
+.hero-section {
+  min-height: 82vh;
+  padding-top: 5rem;
+  background:
+    linear-gradient(90deg, rgba(12, 28, 41, 0.88), rgba(12, 28, 41, 0.58) 48%, rgba(12, 28, 41, 0.2)),
+    url("assets/web/map.webp") center / cover no-repeat;
+}
+
+.hero-metrics span {
+  display: block;
+  min-height: 48px;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  font-weight: 900;
+}
+
+.info-card,
+.rule-card,
+.step-card,
+.score-panel {
+  border-radius: 0.5rem;
+}
+
+.info-card,
+.rule-card {
+  background: #fffdf7;
+}
+
+.step-card {
+  height: 100%;
+  padding: 1.1rem;
+  background: #fffdf7;
+  border-left: 0.38rem solid var(--brand);
+  box-shadow: 0 1rem 2.2rem rgba(31, 41, 51, 0.08);
+}
+
+.step-card span {
+  display: inline-grid;
+  place-items: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  margin-bottom: 0.75rem;
+  color: #fff;
+  background: var(--coral);
+  border-radius: 50%;
+  font-weight: 900;
+}
+
+.step-card h3 {
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+
+.step-card p,
+.rule-card p {
+  margin-bottom: 0;
+}
+
+.score-panel {
+  padding: 1.4rem;
+  background: #e9f2f8;
+  border-left: 0.42rem solid #1f5b8f;
+}
+
+.score-chip {
+  display: block;
+  min-height: 100%;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid #c9d9e4;
+  border-radius: 0.5rem;
+  background: #fff;
+  font-weight: 800;
+}
+
+.deck-tab.btn {
+  font-weight: 900;
+}
+
+.deck-section {
+  scroll-margin-top: 6rem;
+}
+
+.deck-heading {
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(31, 41, 51, 0.14);
+}
+
+.card-cover {
+  height: 100%;
+  overflow: hidden;
+  border: 0;
+  border-radius: 0.5rem;
+  background: #fffdf7;
+  box-shadow: 0 1rem 2rem rgba(31, 41, 51, 0.1);
+  cursor: pointer;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.card-cover:hover,
+.card-cover:focus-within {
+  transform: translateY(-4px);
+  box-shadow: 0 1.35rem 2.6rem rgba(31, 41, 51, 0.16);
+}
+
+.card-cover img {
+  width: 100%;
+  aspect-ratio: 1060 / 1484;
+  object-fit: contain;
+  background: #efe7d5;
+}
+
+.card-cover[data-deck="decision"] img {
+  aspect-ratio: 1484 / 1060;
+}
+
+.card-cover .card-body {
+  padding: 0.8rem;
+}
+
+.card-cover-title {
+  min-height: 2.8rem;
+  margin: 0;
+  font-size: 0.98rem;
+  font-weight: 900;
+  line-height: 1.35;
+}
+
+.deck-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.75rem;
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  color: #fff;
+  font-size: 0.76rem;
+  font-weight: 900;
+}
+
+.deck-badge.event {
+  background: #b94c3e;
+}
+
+.deck-badge.opportunity {
+  background: #3f7d3d;
+}
+
+.deck-badge.asset {
+  background: #b8841f;
+}
+
+.deck-badge.decision {
+  background: #6a5a91;
+}
+
+.deck-badge.favor {
+  background: #1f5b8f;
+}
+
+.empty-state {
+  padding: 1.5rem;
+  color: #5f6b76;
+  background: #fff;
+  border: 1px solid #c8d5db;
+  border-radius: 0.5rem;
+  font-weight: 900;
+}
+
+.modal-image-panel {
+  display: grid;
+  place-items: center;
+  min-height: 22rem;
+  background: #f4ead8;
+}
+
+.modal-image-panel img {
+  width: auto;
+  max-height: 82vh;
+  object-fit: contain;
+}
+
+#cardDetailImpacts .badge {
+  font-size: 0.88rem;
+}
+
+@media (max-width: 767.98px) {
+  .section-pad {
+    padding: 3.5rem 0;
+  }
+
+  .hero-section {
+    min-height: 78vh;
+    background-position: center;
+  }
+
+  .display-2 {
+    font-size: 2.7rem;
+  }
+
+  .modal-image-panel img {
+    max-height: 65vh;
+  }
+}

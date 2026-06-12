@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>人生備胎挑戰賽｜遊戲介紹與卡牌圖鑑</title>
+    <meta
+      name="description"
+      content="人生備胎挑戰賽的靜態遊戲介紹網頁，整合地圖、玩家紀錄表、人情卡、事件卡、機會卡、資產卡與關鍵抉擇卡。"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top bg-cream border-bottom">
+      <div class="container-xxl">
+        <a class="navbar-brand fw-black text-brand" href="#top">人生備胎挑戰賽</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="展開導覽"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <div class="navbar-nav ms-auto gap-lg-2 fw-bold">
+            <a class="nav-link" href="#flow">遊戲流程</a>
+            <a class="nav-link" href="#record">紀錄表</a>
+            <a class="nav-link" href="#spaces">重要格子</a>
+            <a class="nav-link" href="#card-guide">卡牌分類</a>
+            <a class="nav-link" href="#score">結算</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main id="top">
+      <section class="hero-section d-flex align-items-end text-white">
+        <div class="container-xxl py-5">
+          <div class="row">
+            <div class="col-lg-7">
+              <p class="section-kicker text-warning mb-2">家庭財商與人生韌性桌遊</p>
+              <h1 class="display-2 fw-black mb-3">人生備胎挑戰賽</h1>
+              <p class="lead mb-4">
+                玩家在地圖上前進，經營現金流、累積資產，也要照顧工作、健康、家庭、財務四顆備胎。
+                贏的不只是錢，而是誰能在突發狀況裡保有選擇。
+              </p>
+              <div class="d-flex flex-wrap gap-2 mb-4">
+                <a class="btn btn-coral btn-lg fw-bold" href="#card-guide">查看卡牌分類</a>
+                <a class="btn btn-outline-light btn-lg fw-bold" href="#flow">了解玩法</a>
+              </div>
+              <div class="row g-2 hero-metrics">
+                <div class="col-6 col-md-3"><span>30 格地圖</span></div>
+                <div class="col-6 col-md-3"><span>4 種備胎</span></div>
+                <div class="col-6 col-md-3"><span>81 個圖鑑項目</span></div>
+                <div class="col-6 col-md-3"><span>30-60 分鐘</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad bg-soft">
+        <div class="container-xxl">
+          <div class="row align-items-end g-4 mb-4">
+            <div class="col-lg-8">
+              <p class="section-kicker">核心概念</p>
+              <h2 class="fw-black">四個備胎，決定你遇到事件時有多穩</h2>
+              <p class="text-secondary mb-0">
+                備胎點數最高 5、最低 0。任一備胎降到 0 就爆胎求救；備胎達 4 以上會有事件減免或加成。
+              </p>
+            </div>
+          </div>
+          <div class="row g-3">
+            <div class="col-md-6 col-xl-3">
+              <div class="card h-100 border-0 shadow-sm info-card">
+                <div class="card-body">
+                  <h3 class="h5 fw-black text-primary">工作備胎</h3>
+                  <p class="mb-0">代表職涯能力、案源與成長彈性。高工作備胎可讓加薪、接案與工作事件更有利。</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <div class="card h-100 border-0 shadow-sm info-card">
+                <div class="card-body">
+                  <h3 class="h5 fw-black text-success">健康備胎</h3>
+                  <p class="mb-0">代表身體狀態與復原力。健康事件來臨時，點數越高越能降低損失。</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <div class="card h-100 border-0 shadow-sm info-card">
+                <div class="card-body">
+                  <h3 class="h5 fw-black text-danger">家庭備胎</h3>
+                  <p class="mb-0">代表家人支持、人際互助與關係品質。家庭備胎能保護家庭支出與合作資產風險。</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <div class="card h-100 border-0 shadow-sm info-card">
+                <div class="card-body">
+                  <h3 class="h5 fw-black text-brand">財務備胎</h3>
+                  <p class="mb-0">代表預算、儲蓄、風險管理。財務備胎可抵銷事件金錢損失，是最泛用的保護。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad bg-white" id="flow">
+        <div class="container-xxl">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-6">
+              <p class="section-kicker">遊戲流程</p>
+              <h2 class="fw-black mb-3">每回合做四件事</h2>
+              <p class="text-secondary">
+                玩家沿地圖外圈前進，透過格子效果與卡牌事件累積現金流、維護備胎，最後用紀錄表結算總分。
+              </p>
+              <div class="row g-3 mt-2">
+                <div class="col-sm-6">
+                  <div class="step-card">
+                    <span>1</span>
+                    <h3>擲骰前進</h3>
+                    <p>沿地圖外圈順時針走；經過或停在現金流日都要結算。</p>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="step-card">
+                    <span>2</span>
+                    <h3>執行格子</h3>
+                    <p>依停留格抽卡、買資產、補備胎或做選擇。</p>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="step-card">
+                    <span>3</span>
+                    <h3>更新紀錄</h3>
+                    <p>調整現金、薪水、被動收入、固定支出與四個備胎。</p>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="step-card">
+                    <span>4</span>
+                    <h3>爆胎處理</h3>
+                    <p>任一備胎降到 0 時，立刻選擇自己修補、求救或緊急借款。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <img
+                class="img-fluid rounded-3 shadow-lg"
+                src="assets/web/map.webp"
+                alt="人生備胎挑戰賽遊戲地圖"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad bg-mint" id="record">
+        <div class="container-xxl">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-7">
+              <img
+                class="img-fluid rounded-3 shadow-lg bg-white"
+                src="assets/web/record-sheet.webp"
+                alt="人生備胎挑戰賽玩家紀錄表"
+                loading="lazy"
+              />
+            </div>
+            <div class="col-lg-5">
+              <p class="section-kicker">玩家紀錄表</p>
+              <h2 class="fw-black mb-3">一張表追蹤金錢區與備胎區</h2>
+              <div class="accordion shadow-sm" id="recordAccordion">
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#moneyPanel">
+                      金錢區
+                    </button>
+                  </h3>
+                  <div id="moneyPanel" class="accordion-collapse collapse show" data-bs-parent="#recordAccordion">
+                    <div class="accordion-body">
+                      記錄現金、薪水、被動收入、固定支出與目前現金流。每次現金流日用「薪水 + 被動收入 - 固定支出」結算。
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#backupPanel">
+                      備胎紀錄區
+                    </button>
+                  </h3>
+                  <div id="backupPanel" class="accordion-collapse collapse" data-bs-parent="#recordAccordion">
+                    <div class="accordion-body">
+                      四個備胎從 0 到 5。0 是爆胎、1 是紅色警戒、4 以上有保護效果。玩家要同時顧錢和生活韌性。
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#updatePanel">
+                      什麼時候更新
+                    </button>
+                  </h3>
+                  <div id="updatePanel" class="accordion-collapse collapse" data-bs-parent="#recordAccordion">
+                    <div class="accordion-body">
+                      拿錢、買資產、增加固定支出、借款、儲蓄或備胎變動時都要立刻更新，避免結算時漏算。
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad bg-soft" id="spaces">
+        <div class="container-xxl">
+          <div class="row mb-4">
+            <div class="col-lg-8">
+              <p class="section-kicker">重要格子</p>
+              <h2 class="fw-black">不用背 30 格，只要先懂這些格子</h2>
+              <p class="text-secondary mb-0">
+                地圖格子很多，但新玩家只要掌握現金流、資產、事件、機會與抉擇，就能理解遊戲節奏。
+              </p>
+            </div>
+          </div>
+          <div class="row g-3">
+            <div class="col-md-6 col-xl-3">
+              <div class="card h-100 border-0 shadow-sm rule-card">
+                <div class="card-body">
+                  <span class="badge text-bg-success mb-3">現金流日</span>
+                  <h3 class="h5 fw-black">經過或停在都結算</h3>
+                  <p>結算薪水 + 被動收入 - 固定支出。這是玩家現金累積的主要來源。</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <div class="card h-100 border-0 shadow-sm rule-card">
+                <div class="card-body">
+                  <span class="badge text-bg-warning mb-3">資產市場</span>
+                  <h3 class="h5 fw-black">翻 2 張，可買 1 張</h3>
+                  <p>只有停在資產市場才能買資產。買下後立刻更新被動收入、固定支出與現金。</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <div class="card h-100 border-0 shadow-sm rule-card">
+                <div class="card-body">
+                  <span class="badge text-bg-danger mb-3">事件卡</span>
+                  <h3 class="h5 fw-black">突發狀況考驗備胎</h3>
+                  <p>事件可能扣錢、扣備胎、影響資產。若備胎降到 0，立刻爆胎求救。</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <div class="card h-100 border-0 shadow-sm rule-card">
+                <div class="card-body">
+                  <span class="badge text-bg-primary mb-3">機會與抉擇</span>
+                  <h3 class="h5 fw-black">好機會也需要取捨</h3>
+                  <p>機會卡常帶來成長；關鍵抉擇卡則要求玩家在短期現金和長期安全間選擇。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-pad bg-card-gallery" id="card-guide">
+        <div class="container-xxl">
+          <div class="row align-items-end g-4 mb-4">
+            <div class="col-lg-8">
+              <p class="section-kicker">卡牌分類</p>
+              <h2 class="fw-black">先看卡面，點擊後再看詳細用途</h2>
+              <p class="text-secondary mb-0">
+                卡牌依種類排列。頁面上不直接展開效果文字，點擊任一卡牌會開啟放大卡面與詳細說明。
+              </p>
+            </div>
+            <div class="col-lg-4">
+              <label class="form-label fw-bold" for="cardSearch">搜尋卡名或關鍵字</label>
+              <input class="form-control form-control-lg" id="cardSearch" type="search" placeholder="例如：爆胎、被動收入、健康" />
+            </div>
+          </div>
+
+          <div class="d-flex flex-wrap gap-2 mb-4" id="deckTabs" role="tablist" aria-label="卡牌分類"></div>
+          <p class="fw-bold text-secondary" id="resultCount" aria-live="polite"></p>
+          <div class="vstack gap-5" id="cardDecks"></div>
+        </div>
+      </section>
+
+      <section class="section-pad bg-white" id="score">
+        <div class="container-xxl">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-6">
+              <p class="section-kicker">遊戲結束</p>
+              <h2 class="fw-black">結算看的是資產、韌性與風險管理</h2>
+              <p class="text-secondary mb-0">
+                時間到、三圈結束或教學局結束後，每位玩家依紀錄表結算總分。
+              </p>
+            </div>
+            <div class="col-lg-6">
+              <div class="score-panel shadow-sm">
+                <p class="fw-black mb-3">
+                  總分 = 現金 + 儲蓄 + 被動收入 × 8 + 四個備胎總點數 × 700 - 負債 - 固定支出 × 3 + 成就分 + 人情卡分
+                </p>
+                <div class="row g-2">
+                  <div class="col-sm-6"><span class="score-chip">被動收入至少 2,000：+2,000</span></div>
+                  <div class="col-sm-6"><span class="score-chip">被動收入至少 5,000：+5,000</span></div>
+                  <div class="col-sm-6"><span class="score-chip">收入 ≥ 固定支出：+3,000</span></div>
+                  <div class="col-sm-6"><span class="score-chip">四個備胎都至少 4：+3,000</span></div>
+                  <div class="col-sm-6"><span class="score-chip">沒有負債：+2,000</span></div>
+                  <div class="col-sm-6"><span class="score-chip">人情卡每張：+1,000</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="modal fade" id="cardDetailModal" tabindex="-1" aria-labelledby="cardDetailTitle" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content border-0">
+          <div class="modal-header bg-cream">
+            <div>
+              <p class="section-kicker mb-1" id="cardDetailDeck">卡牌分類</p>
+              <h2 class="modal-title h3 fw-black" id="cardDetailTitle">卡牌名稱</h2>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="關閉"></button>
+          </div>
+          <div class="modal-body p-0">
+            <div class="row g-0">
+              <div class="col-lg-6 modal-image-panel">
+                <img class="img-fluid" id="cardDetailImage" alt="" />
+              </div>
+              <div class="col-lg-6">
+                <div class="p-4 p-lg-5">
+                  <div class="d-flex flex-wrap gap-2 mb-4" id="cardDetailImpacts"></div>
+                  <section class="mb-4">
+                    <h3 class="h6 fw-black text-secondary">用途</h3>
+                    <p class="mb-0" id="cardDetailPurpose"></p>
+                  </section>
+                  <section class="mb-4">
+                    <h3 class="h6 fw-black text-secondary">使用時機</h3>
+                    <p class="mb-0" id="cardDetailWhen"></p>
+                  </section>
+                  <section>
+                    <h3 class="h6 fw-black text-secondary">卡片效果</h3>
+                    <ul class="mb-0" id="cardDetailEffects"></ul>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
